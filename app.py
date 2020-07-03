@@ -41,7 +41,7 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-@app.route('/sentiment_analysis_prediction', methods = ['POST', "GET"])
+@app.route('/sent_analysis_prediction', methods = ['POST', "GET"])
 def sent_analysis_prediction():
     
  
@@ -111,7 +111,7 @@ def sent_analysis_prediction():
         pos=sentences.predictedsentiment[sentences.predictedsentiment=='positive'].count()  
         neutral=sentences.predictedsentiment[sentences.predictedsentiment=='neutral'].count()
         neg=sentences.predictedsentiment[sentences.predictedsentiment=='negative'].count()
-        '''
+        
         df1 = sentences[sentences['predictedsentiment']=='negative']
         words = ' '.join(df1['new_message'])
         cleaned_word = " ".join([word for word in words.split() if 'http' not in word and not word.startswith('@') and word != 'RT'])
@@ -144,8 +144,8 @@ def sent_analysis_prediction():
         negimg_filename = os.path.join('static', 'negative.png')
         posimg_filename = os.path.join('static', 'positive.png')
         neutralimg_filename = os.path.join('static', 'neutral.png')
-        '''
-        return render_template('home.html', sentiment=pos,probability= neg,neutral = neutral)              
+        
+        return render_template('home.html', sentiment=pos,probability= neg,neutral = neutral,pos=posimg_filename,neg=negimg_filename,neu= neutralimg_filename)              
         
 if __name__ == "__main__":
     init()
