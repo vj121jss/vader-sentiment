@@ -122,7 +122,7 @@ tqdm==4.47.0
 traitlets==4.3.3
 typing-extensions==3.7.4.2
 tzlocal==2.1
-urllib3==1.25.9
+urllib3==1.26.5
 vaderSentiment==3.3.2
 validators==0.15.0
 virtualenv==20.0.25
