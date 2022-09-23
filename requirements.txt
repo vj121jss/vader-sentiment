@@ -81,7 +81,7 @@ Pillow==6.2.1
 pluggy==0.13.0
 prometheus-client==0.8.0
 prompt-toolkit==3.0.5
-protobuf==3.12.2
+protobuf==3.18.3
 py==1.8.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
